@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c1569e26-2c76-4bde-b91b-b33ec4a557c4" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="4341f57e-2fae-4c69-8e88-0b45341bf7f3" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8083" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="save-update" path="/reusability-meter/v1/save/component" id="11b3710c-39c6-41ee-9b5b-ffa26436effe"><con:settings/><con:parameters/><con:method name="save-update" id="dc38b1fd-c1cc-4e58-a74b-249ab84308f9" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:com="http://localhost/reusability-meter/v1/save/component">com:Response</con:element></con:representation><con:request name="Request 1" id="17627fa5-a7d4-4e48-9c12-32b5e97158fa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request>{
+	
+	"componentInfo":[{
+		"name":"component12",
+		"type":"type1",
+		"description":"description1",
+		"version":"version1",
+		"active":true,
+		"linesOfCode":"12",
+		"teamInfo":[{
+		"id":"2",
+		"name":"team1",
+		"programName":"programName1",
+		"applicationName":"applicationName1",
+		"securityGroup":"securityGroup1",
+		"createdBy":"team1"	
+			}
+			]
+		}
+	]
+	
+}</con:request><con:originalUri>http://localhost/reusability-meter/v1/save/component</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="components" path="/reusability-meter/v1/components" id="67c2c21c-ca0a-4459-a35d-79f2ef9026a7"><con:settings/><con:parameters/><con:method name="components" id="65a2c345-8553-4bb7-a513-21a65111b261" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:com="http://localhost/reusability-meter/v1/components">com:Response</con:element></con:representation><con:request name="Request 1" id="d9759b27-03a5-4a70-b1d6-7d8a30dab4ec" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request/><con:originalUri>http://localhost/reusability-meter/v1/components</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="reusability" path="/reusability-meter/v1/reusability" id="80165b11-2f38-43ee-ad41-054bdd17441a"><con:settings/><con:parameters/><con:method name="reusability" id="11fe8d1c-8b9c-48a8-bae7-1e1782ddf8c6" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:reus="http://localhost/reusability-meter/v1/reusability">reus:Response</con:element></con:representation><con:request name="Request 1" id="f5cb7907-9697-424a-995c-b224c040d9f6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request/><con:originalUri>http://localhost/reusability-meter/v1/reusability</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="delete" path="/reusability-meter/v1/delete" id="8d68e0c5-30a1-434a-992a-8c348741401d"><con:settings/><con:parameters/><con:method name="Method 1" id="49fcacb4-2487-4163-94cf-028ffa38dae3" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/hal+json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:del="http://localhost/delete">del:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:del="http://localhost/delete">del:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="394901e2-81ec-42ad-a42a-1e77564501e5" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request>{
+	
+	"componentInfo":[
+		{
+		"id":"6148db50ffeb002890e39b39",
+		"name":"component12",
+		"type":"type1",
+		"description":"description1",
+		"version":"version1",
+		"active":true,
+		"linesOfCode":"12",
+		"teamInfo":[{
+		"id":"2",
+		"name":"team1",
+		"programName":"programName1",
+		"applicationName":"applicationName1",
+		"securityGroup":"securityGroup1",
+		"createdBy":"team1"	
+			}
+			]
+		},
+		{
+		"id":"6148d7b8ffeb002890e39b37",
+		"name":"component12",
+		"type":"type1",
+		"description":"description1",
+		"version":"version1",
+		"active":true,
+		"linesOfCode":"12",
+		"teamInfo":[{
+		"id":"2",
+		"name":"team1",
+		"programName":"programName1",
+		"applicationName":"applicationName1",
+		"securityGroup":"securityGroup1",
+		"createdBy":"team1"	
+			}
+			]
+		}
+	]
+	
+}</con:request><con:originalUri>http://localhost/delete</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="stats" path="/reusability-meter/v1/stats" id="67c2c21c-ca0a-4459-a35d-79f2ef9026a7"><con:settings/><con:parameters/><con:method name="stats" id="65a2c345-8553-4bb7-a513-21a65111b261" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:com="http://localhost/reusability-meter/v1/components">com:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="d9759b27-03a5-4a70-b1d6-7d8a30dab4ec" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request/><con:originalUri>http://localhost/reusability-meter/v1/components</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="mostReusedArtifacts" path="/reusability-meter/v1/mostReusedArtifacts" id="67c2c21c-ca0a-4459-a35d-79f2ef9026a7"><con:settings/><con:parameters/><con:method name="mostReusedArtifacts" id="65a2c345-8553-4bb7-a513-21a65111b261" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:com="http://localhost/reusability-meter/v1/components">com:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="d9759b27-03a5-4a70-b1d6-7d8a30dab4ec" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request/><con:originalUri>http://localhost/reusability-meter/v1/components</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
